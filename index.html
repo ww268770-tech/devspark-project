@@ -1,95 +1,184 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>DevSpark</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DevSpark Project</title>
   <style>
     body {
       margin: 0;
-      padding: 0;
-      font-family: 'Poppins', sans-serif;
-      background: radial-gradient(circle at top, #0f0f0f, #000);
-      color: #fff;
-      text-align: center;
-      height: 100vh;
+      font-family: 'Cairo', sans-serif;
+      background-color: #f9fbff;
+      color: #222;
+    }
+
+    header {
+      background: #fff;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
       display: flex;
-      flex-direction: column;
-      justify-content: center;
+      justify-content: space-between;
       align-items: center;
-      overflow: hidden;
-    }
-
-    h1 {
-      font-size: 2.8em;
-      color: #ffcc00;
-      animation: glow 2s infinite alternate;
-    }
-
-    @keyframes glow {
-      from { text-shadow: 0 0 10px #ffcc00; }
-      to { text-shadow: 0 0 30px #ff6600; }
-    }
-
-    p {
-      font-size: 1.2em;
-      margin-top: 10px;
-      color: #bbb;
-    }
-
-    .buttons {
-      margin-top: 25px;
-    }
-
-    .btn {
-      background: linear-gradient(90deg, #7a00ff, #b700ff);
-      color: white;
-      padding: 10px 25px;
-      border: none;
-      border-radius: 30px;
-      cursor: pointer;
-      font-size: 1em;
-      margin: 5px;
-      transition: transform 0.2s, box-shadow 0.2s;
-      text-decoration: none;
-      display: inline-block;
-    }
-
-    .btn:hover {
-      transform: scale(1.1);
-      box-shadow: 0 0 20px #b700ff;
+      padding: 15px 30px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
     }
 
     .logo {
-      width: 120px;
-      height: 120px;
-      border-radius: 50%;
-      margin-bottom: 15px;
-      border: 3px solid #b700ff;
-      box-shadow: 0 0 25px #b700ff;
-      animation: float 3s ease-in-out infinite;
+      font-weight: 800;
+      color: #007bff;
+      font-size: 22px;
+      line-height: 1.2;
     }
 
-    @keyframes float {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-10px); }
+    nav a {
+      text-decoration: none;
+      color: #333;
+      margin: 0 10px;
+      font-weight: 500;
     }
 
-    .spark {
-      color: #b700ff;
-      font-weight: bold;
+    nav a:hover {
+      color: #007bff;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 100px 20px 70px;
+      background: linear-gradient(to bottom, #eaf2ff, #f9fbff);
+    }
+
+    .hero h1 {
+      font-size: 40px;
+      color: #007bff;
+      margin: 10px 0;
+    }
+
+    .hero p {
+      font-size: 18px;
+      color: #555;
+      margin-bottom: 30px;
+    }
+
+    .hero button {
+      background: #007bff;
+      color: #fff;
+      border: none;
+      padding: 12px 30px;
+      border-radius: 25px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: 0.3s;
+    }
+
+    .hero button:hover {
+      background: #0056d1;
+    }
+
+    section {
+      padding: 50px 20px;
+      text-align: center;
+    }
+
+    .cards {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+      padding: 25px;
+      text-align: right;
+      transition: transform 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card h3 {
+      color: #007bff;
+      font-size: 20px;
+    }
+
+    footer {
+      background: #007bff;
+      color: white;
+      text-align: center;
+      padding: 20px 10px;
+      margin-top: 40px;
+    }
+
+    footer a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      margin: 0 5px;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    @media (min-width: 768px) {
+      .cards {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      .card {
+        width: 40%;
+      }
     }
   </style>
 </head>
 <body>
-  <img src="https://your-logo-link-here.png" alt="DevSpark Logo" class="logo">
-  <h1>🔥 أهلاً بك في موقع <span class="spark">DevSpark</span>!</h1>
-  <p>🚀 نصنع المحتوى التحفيزي والإبداعي الذي يلهم الجيل القادم ⚡</p>
-  
-  <div class="buttons">
-    <a href="#" class="btn">📸 Instagram</a>
-    <a href="#" class="btn">🎥 YouTube</a>
-    <a href="#" class="btn">🐦 Twitter</a>
-  </div>
+  <header>
+    <div class="logo">DevSpark<br>Project</div>
+    <nav>
+      <a href="#">الرئيسية</a>
+      <a href="#">عن المشروع</a>
+      <a href="#">الخدمات</a>
+      <a href="#">تواصل</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2>مرحباً بك في</h2>
+    <h1>DevSpark Project</h1>
+    <p>مشروع يجمع بين الإبداع والتقنية لتعليم المونتاج وصناعة محتوى رقمي ملهم.</p>
+    <button>ابدأ الآن</button>
+  </section>
+
+  <section>
+    <div class="cards">
+      <div class="card">
+        <h3>🎬 مونتاج احترافي</h3>
+        <p>تعلم تحويل الأفكار إلى مقاطع مرئية جذابة تلهم الجمهور بأسلوب احترافي وإبداعي.</p>
+      </div>
+      <div class="card">
+        <h3>💻 تطوير مهاراتك</h3>
+        <p>نساعدك على إتقان أدوات المونتاج والبرامج الاحترافية لصناعة محتوى عالي الجودة.</p>
+      </div>
+      <div class="card">
+        <h3>🚀 محتوى تحفيزي</h3>
+        <p>إلهام الجيل القادم من صناع المحتوى ليشاركوا قصصهم ويترجموا شغفهم إلى نجاح.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 DevSpark Project | جميع الحقوق محفوظة</p>
+    <p>تابعنا على 
+      <a href="#">Instagram</a> | 
+      <a href="#">YouTube</a> | 
+      <a href="#">TikTok</a>
+    </p>
+  </footer>
 </body>
-    </html>
+      </html>
